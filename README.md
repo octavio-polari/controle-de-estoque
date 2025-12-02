@@ -6,63 +6,63 @@
 
 ## Como funciona:
 
-##### Para instalar as dependências:
+#### Para instalar as dependências:
 
 ```bash
 bun install
 ```
 
-##### Para rodar o projeto:
+#### Para rodar o projeto:
 
 ```bash
 bun run index.ts
 ```
 
-##### - Endpoint /saida:
-- Registra todas as saídas na tabela `saida`
-    - Os campos são:
-        ```python
-        - nome (do item)
-        - extrator (nome de quem retira o item)
-        - quantidade (que foi retirada)
-        ``` 
+#### - Endpoint /saida:
+Registra todas as saídas na tabela `saida`
+- Os campos são:
+    ```python
+    - nome (do item)
+    - extrator (nome de quem retira o item)
+    - quantidade (que foi retirada)
+    ``` 
 
 ##### - Endpoint /adicionar:
-- Registra novos itens na tabela `item`
-    - Os campos são:
-        ```python
-        - nome (do item)
-        - formato (un., cx., ...)
-        - in_estoque (quantidade em estoque atual)
-        ```
+Registra novos itens na tabela `item`
+- Os campos são:
+    ```python
+    - nome (do item)
+    - formato (un., cx., ...)
+    - in_estoque (quantidade em estoque atual)
+    ```
  
  ##### - Endpoint /controle
- - Visualiza o estoque completo
-    - Os campos são:
-        ```python
-        - item (nome do item)
-        - formato (un., cx., ...)
-        - ut_estoque (último registrado do estoque atual no último mês)
-        - entrada (no registro do último mês)
-        - saída (o estoque atual menos o último estoque somado à entrada)
-        - at_estoque (estoque atual)
-        ```
+ Visualiza o estoque completo
+- Os campos são:
+    ```python
+    - item (nome do item)
+    - formato (un., cx., ...)
+    - ut_estoque (último registrado do estoque atual no último mês)
+    - entrada (no registro do último mês)
+    - saída (o estoque atual menos o último estoque somado à entrada)
+    - at_estoque (estoque atual)
+    ```
 
 ## Base de Dados
 
 #### As tabelas estão estruturadas da seguinte forma:
 
-##### Saída
+#### Saída
 |   Item  | Extrator |   Saída   |  DT_Saída  |
 |---------|----------|-----------|------------|
 | `Texto` |  `Texto` | `Integer` | `DataTime` |
 
-##### Cadastro de Item
+#### Cadastro de Item
 |   Nome  | Formato | IN_Estoque |
 |---------|---------|------------|
 | `Texto` | `Texto` |  `Integer` |
 
-##### Controle Geral
+#### Controle Geral
 |   Item  | Formato | UT_Estoque |   Entrada |   Saída   | AT_Estoque |
 |---------|---------|------------|-----------|-----------|------------|
 | `Texto` | `Texto` |  `Integer` | `Integer` | `Integer` |  `Integer` |
