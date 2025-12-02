@@ -21,31 +21,31 @@ bun run index.ts
 #### - Endpoint /saida:
 - Registra todas as saídas na tabela `saida`
     - Os campos são:
-        ```bash
-            - nome (do item)
-            - extrator (nome de quem retira o item)
-            - quantidade (que foi retirada)
+        ```python
+        - nome (do item)
+        - extrator (nome de quem retira o item)
+        - quantidade (que foi retirada)
         ``` 
 
 #### - Endpoint /adicionar:
 - Registra novos itens na tabela `item`
     - Os campos são:
-        ```bash
-            - nome (do item)
-            - formato (un., cx., ...)
-            - in_estoque (quantidade em estoque atual)
+        ```python
+        - nome (do item)
+        - formato (un., cx., ...)
+        - in_estoque (quantidade em estoque atual)
         ```
  
  #### - Endpoint /controle
  - Visualiza o estoque completo
     - Os campos são:
-        ```bash
-            - item
-            - formato (un., cx., ...)
-            - ut_estoque (último registrado do estoque atual no último mês)
-            - entrada (no registro do último mês)
-            - saída (o estoque atual menos o último estoque somado à entrada)
-            - at_estoque (estoque atual)
+        ```python
+        - item (nome do item)
+        - formato (un., cx., ...)
+        - ut_estoque (último registrado do estoque atual no último mês)
+        - entrada (no registro do último mês)
+        - saída (o estoque atual menos o último estoque somado à entrada)
+        - at_estoque (estoque atual)
         ```
 
 # Base de Dados
