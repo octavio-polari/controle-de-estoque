@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Estoque</title>
+</head>
+<body>
+    <h1 id="title">📦 Controle de Estoque</h1>
+
+    <h2 id="sub">❌ Saída</h2>
+
+    <button onclick="location.href = './adicionar.html';" id="adicionar-produto" >+ Adicionar</button>
+    <button type="button" onclick="location.href = './controle.html';" id="controle" >Ver Saídas</button><br><br>
+
+
+    <input id="item"        type="text"     placeholder="Nome..."       list="lista-produtos" >     <br><br>
+    
+    <input id="extrator"    type="text"     placeholder="Extrator..."                         >     <br><br>
+    <input id="quantidade"  type="number"   placeholder="Quantidade..."                       >     <br><br>
+    
+    <button id="lancar-saida" type="submit">Lançar Saída</button><br><br>
+    
+    <datalist id="lista-produtos"></datalist>
+
+    <script src="../script/saida.js"></script>
+</body>
+</html>
