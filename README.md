@@ -1,24 +1,24 @@
 # Controle de Estoque
 
-#### Para instalar as dependências:
+## Descrição
+
+#### Este software foi criado no intuito de auxiliar minha noiva no controle do estoque do posto de saúde em que trabalha.
+
+## Como funciona:
+
+##### Para instalar as dependências:
 
 ```bash
 bun install
 ```
 
-#### Para rodar o projeto:
+##### Para rodar o projeto:
 
 ```bash
 bun run index.ts
 ```
 
-# Descrição
-
-#### Este software foi criado no intuito de auxiliar minha noiva no controle do estoque do posto de saúde em que trabalha.
-
-# Como funciona:
-
-#### - Endpoint /saida:
+##### - Endpoint /saida:
 - Registra todas as saídas na tabela `saida`
     - Os campos são:
         ```python
@@ -27,7 +27,7 @@ bun run index.ts
         - quantidade (que foi retirada)
         ``` 
 
-#### - Endpoint /adicionar:
+##### - Endpoint /adicionar:
 - Registra novos itens na tabela `item`
     - Os campos são:
         ```python
@@ -36,7 +36,7 @@ bun run index.ts
         - in_estoque (quantidade em estoque atual)
         ```
  
- #### - Endpoint /controle
+ ##### - Endpoint /controle
  - Visualiza o estoque completo
     - Os campos são:
         ```python
@@ -48,21 +48,21 @@ bun run index.ts
         - at_estoque (estoque atual)
         ```
 
-# Base de Dados
+## Base de Dados
 
-### As tabelas estão estruturadas da seguinte forma:
+#### As tabelas estão estruturadas da seguinte forma:
 
-#### Saída
+##### Saída
 |   Item  | Extrator |   Saída   |  DT_Saída  |
 |---------|----------|-----------|------------|
 | `Texto` |  `Texto` | `Integer` | `DataTime` |
 
-#### Cadastro de Item
+##### Cadastro de Item
 |   Nome  | Formato | IN_Estoque |
 |---------|---------|------------|
 | `Texto` | `Texto` |  `Integer` |
 
-#### Controle Geral
+##### Controle Geral
 |   Item  | Formato | UT_Estoque |   Entrada |   Saída   | AT_Estoque |
 |---------|---------|------------|-----------|-----------|------------|
 | `Texto` | `Texto` |  `Integer` | `Integer` | `Integer` |  `Integer` |
